@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import uniqid from "uniqid";
+import "../styles/gamespace.css";
 import insect1 from "../images/insect1.jpg";
 import insect2 from "../images/insect2.jpg";
 import insect3 from "../images/insect3.jpg";
@@ -55,9 +56,7 @@ const Gamespace = () => {
   return (
     <div className="gamespace">
       {cardArrangement.map((image) => {
-        return (
-          <Card key={uniqid()} image={image}/>
-        )
+        return <Card key={uniqid()} image={image} />;
       })}
     </div>
   );
