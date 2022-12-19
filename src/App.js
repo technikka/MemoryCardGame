@@ -1,10 +1,11 @@
 import Scoreboard from "./components/Scoreboard";
+import Gamespace from "./components/Gamespace";
 
 const App = () => {
   return (
     <div>
       <Scoreboard />
-      {/* cards container */}
+      <Gamespace />
     </div>
   )
 
