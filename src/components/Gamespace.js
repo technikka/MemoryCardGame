@@ -15,7 +15,6 @@ import insect11 from "../images/insect11.jpg";
 import insect12 from "../images/insect12.jpg";
 import insect13 from "../images/insect13.jpg";
 import insect14 from "../images/insect14.jpg";
-
 import Card from "./Card";
 
 const Gamespace = () => {
@@ -35,28 +34,53 @@ const Gamespace = () => {
     insect13,
     insect14,
   ];
-  const [cardArrangement, setCardArrangement] = useState(cardImages);
 
-  const shuffle = (cardArray) => {
-    let arr = cardArray;
+  const createCards = () => {
+    let arr = [];
+    cardImages.forEach((image) => {
+      let card = { id: uniqid(), image: image };
+      arr.push(card);
+    });
+    return arr;
+  };
+
+  const [cardArrangement, setCardArrangement] = useState(() => createCards());
+
+  const shuffleCardArrangement = () => {
+    // using slice for react to register a change in state of cardArrangement.
+    let arr = cardArrangement.slice();
     let i = arr.length;
     while (--i > 0) {
       let randIndex = Math.floor(Math.random() * (i + 1));
       [arr[randIndex], arr[i]] = [arr[i], arr[randIndex]];
     }
-    return arr;
+    setCardArrangement(arr);
   };
 
-  /* useEffect(() => {
-    function shuffleOrder() {
-      setCardArrangement(shuffle(cardArrangement));
-    }
-  }, [cardArrangement]); */
+  const handleClick = () => {
+    shuffleCardArrangement();
+    // shuffle
+    // card has been clicked
+    // re render game space
+  };
+
+  useEffect(() => {
+    // shuffle when component mounts.
+    shuffleCardArrangement();
+  }, []);
 
   return (
     <div className="gamespace">
-      {cardArrangement.map((image) => {
-        return <Card key={uniqid()} image={image} />;
+      {cardArrangement.map((card) => {
+        return (
+          <Card
+            key={card.id}
+            image={card.image}
+            onClick={() => {
+              handleClick();
+            }}
+          />
+        );
       })}
     </div>
   );
