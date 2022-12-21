@@ -10,10 +10,14 @@ const App = () => {
     setCurrentScore(currentScore + 1);
   }
 
+  const resetScore = () => {
+    setCurrentScore(0);
+  }
+
   return (
     <div>
       <Scoreboard currentScore={currentScore} bestScore={bestScore} />
-      <Gamespace awardPoint={awardPoint} />
+      <Gamespace awardPoint={awardPoint} resetScore={resetScore} />
     </div>
   )
 

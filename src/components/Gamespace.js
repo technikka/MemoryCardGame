@@ -46,6 +46,13 @@ const Gamespace = (props) => {
 
   const [cardArrangement, setCardArrangement] = useState(() => createCards());
 
+  const [round, setRound] = useState(1);
+
+  const newRound = () => {
+    setRound(round + 1);
+    props.resetScore();
+  }
+
   const shuffleCardArrangement = () => {
     // using slice for react to register a change in state of cardArrangement.
     let arr = cardArrangement.slice();
@@ -59,8 +66,6 @@ const Gamespace = (props) => {
 
   const handleClick = () => {
     shuffleCardArrangement();
-    // card has been clicked
-    // re render game space
   };
 
   useEffect(() => {
@@ -68,8 +73,15 @@ const Gamespace = (props) => {
     shuffleCardArrangement();
   }, []);
 
+  useEffect(() => {
+    // use new cards when round changes.
+    setCardArrangement(createCards());
+  }, [round]);
+
+
   return (
     <div className="gamespace">
+      {console.log(cardArrangement)}
       {cardArrangement.map((card) => {
         return (
           <Card
@@ -79,6 +91,7 @@ const Gamespace = (props) => {
               handleClick();
             }}
             awardPoint={props.awardPoint}
+            newRound={newRound}
           />
         );
       })}

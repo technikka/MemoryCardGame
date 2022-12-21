@@ -17,8 +17,7 @@ const Card = (props) => {
 
   const handleClick = () => {
     if (scored() === false) {
-      // reset currentScore
-      // compare if new best score
+      props.newRound();
     } else {
       props.awardPoint();
       setHasBeenClicked(true);
