@@ -10,11 +10,9 @@ import insect6 from "../images/insect6.jpg";
 import insect7 from "../images/insect7.jpg";
 import insect8 from "../images/insect8.jpg";
 import insect9 from "../images/insect9.jpg";
-import insect10 from "../images/insect10.jpg";
 import insect11 from "../images/insect11.jpg";
 import insect12 from "../images/insect12.jpg";
 import insect13 from "../images/insect13.jpg";
-import insect14 from "../images/insect14.jpg";
 import Card from "./Card";
 
 const Gamespace = (props) => {
@@ -28,11 +26,9 @@ const Gamespace = (props) => {
     insect7,
     insect8,
     insect9,
-    insect10,
     insect11,
     insect12,
-    insect13,
-    insect14,
+    insect13
   ];
 
   const createCards = () => {
@@ -77,11 +73,11 @@ const Gamespace = (props) => {
   useEffect(() => {
     // use new cards when round changes.
     setCardArrangement(createCards());
+    shuffleCardArrangement();
   }, [round]);
 
   return (
     <div className="gamespace">
-      {console.log(cardArrangement)}
       {cardArrangement.map((card) => {
         return (
           <Card
