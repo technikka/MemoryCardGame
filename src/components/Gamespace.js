@@ -17,7 +17,7 @@ import insect13 from "../images/insect13.jpg";
 import insect14 from "../images/insect14.jpg";
 import Card from "./Card";
 
-const Gamespace = () => {
+const Gamespace = (props) => {
   const cardImages = [
     insect1,
     insect2,
@@ -78,6 +78,7 @@ const Gamespace = () => {
             onClick={() => {
               handleClick();
             }}
+            awardPoint={props.awardPoint}
           />
         );
       })}
