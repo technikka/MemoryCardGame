@@ -51,7 +51,8 @@ const Gamespace = (props) => {
   const newRound = () => {
     setRound(round + 1);
     props.resetScore();
-  }
+    props.updateBestScore();
+  };
 
   const shuffleCardArrangement = () => {
     // using slice for react to register a change in state of cardArrangement.
@@ -77,7 +78,6 @@ const Gamespace = (props) => {
     // use new cards when round changes.
     setCardArrangement(createCards());
   }, [round]);
-
 
   return (
     <div className="gamespace">
