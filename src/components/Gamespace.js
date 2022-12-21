@@ -59,7 +59,6 @@ const Gamespace = () => {
 
   const handleClick = () => {
     shuffleCardArrangement();
-    // shuffle
     // card has been clicked
     // re render game space
   };

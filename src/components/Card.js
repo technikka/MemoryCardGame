@@ -5,8 +5,13 @@ const Card = (props) => {
   const [hasBeenClicked, setHasBeenClicked] = useState(false);
   const image = props;
 
+  const handleClick = () => {
+    setHasBeenClicked(true);
+    props.onClick();
+  }
+
   return(
-    <div className="card" onClick={props.onClick}>
+    <div className="card" onClick={handleClick}>
       <img src={image.image} alt="insect head" />
     </div>
   )
