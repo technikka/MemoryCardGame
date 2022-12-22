@@ -1,0 +1,18 @@
+.modal {
+  padding: 20px;
+  background: #eeedec;
+  color: black;
+  z-index: 5;
+  border: 1px solid black;
+  border-radius: 10px;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -80%);
+  transition: top 0.3s, opacity 0.3s;
+}
+
+.modal button {
+  margin-left: 15px;
+}

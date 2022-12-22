@@ -17,12 +17,11 @@ const Card = (props) => {
 
   const handleClick = () => {
     if (scored() === false) {
-      props.newRound();
+      props.onClick(false);
     } else {
-      props.awardPoint();
+      props.onClick(true);
       setHasBeenClicked(true);
     }
-    props.onClick();
   };
 
   return (

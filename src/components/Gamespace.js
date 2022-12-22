@@ -28,7 +28,7 @@ const Gamespace = (props) => {
     insect9,
     insect11,
     insect12,
-    insect13
+    insect13,
   ];
 
   const createCards = () => {
@@ -59,8 +59,21 @@ const Gamespace = (props) => {
     return arr;
   };
 
-  const handleClick = () => {
-    setCardArrangement(shuffle(cardArrangement));
+  // call newRound and awardPoint
+  const handleClick = (hasScored) => {
+    if (props.pageActive === true) {
+      if (hasScored === true) {
+        props.awardPoint();
+        if (props.win()) {
+          props.alertWin();
+          setRound(round + 1);
+          return;
+        }
+      } else {
+        newRound();
+      }
+      setCardArrangement(shuffle(cardArrangement));
+    }
   };
 
   useEffect(() => {
@@ -74,11 +87,7 @@ const Gamespace = (props) => {
           <Card
             key={card.id}
             image={card.image}
-            onClick={() => {
-              handleClick();
-            }}
-            awardPoint={props.awardPoint}
-            newRound={newRound}
+            onClick={handleClick}
           />
         );
       })}

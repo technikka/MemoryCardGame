@@ -9,7 +9,6 @@ h1 {
 }
 
 p {
-  /* display: inline-block; */
   margin: 10px 15px;
 }
 
@@ -18,4 +17,18 @@ p {
   font-family:'Courier New', Courier, monospace;
   display: flex;
   justify-content: center;
+}
+
+.restart-btn {
+  display: inline-block;
+  margin-left: 30px;
+  border: none;
+  background-color: #eeedec;
+  padding: 6px;
+}
+
+.restart-btn:hover {
+  cursor: pointer;
+  background-color: #514743;
+  color: #eeedec;
 }

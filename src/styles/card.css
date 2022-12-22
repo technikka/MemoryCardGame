@@ -14,3 +14,7 @@
   object-fit: contain;
   margin: auto;
 }
+
+.card:hover {
+  cursor: pointer;
+}
