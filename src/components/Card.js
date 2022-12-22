@@ -8,11 +8,8 @@ const Card = (props) => {
   const scored = () => {
     if (hasBeenClicked === true) {
       return false;
-    } else if (hasBeenClicked === false) {
-      return true;
-    } else {
-      console.log("ERROR with hasBeenClicked");
     }
+    return true;
   };
 
   const handleClick = () => {

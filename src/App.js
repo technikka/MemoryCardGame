@@ -30,8 +30,8 @@ const App = () => {
   };
 
   const win = () => {
-    console.log(currentScore);
-    if (currentScore === 3) {
+    // this should be 12, but awardPoint isnt changing state quick enough
+    if (currentScore === 11) {
       return true;
     }
     return false;
@@ -45,8 +45,8 @@ const App = () => {
     resetScore();
     resetBestScore();
     setGameover(false);
-    if (pageActive === true) {
-      setPageActive(false);
+    if (pageActive === false) {
+      setPageActive(true);
     }
   };
 

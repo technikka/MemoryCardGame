@@ -9,7 +9,7 @@ const Modal = (props) => {
       <button onClick={props.resetGame}>Yes</button>
       <button onClick={props.stopGame}>No</button>
     </div>
-  )
-}
+  );
+};
 
-export default Modal
+export default Modal;

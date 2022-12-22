@@ -83,13 +83,7 @@ const Gamespace = (props) => {
   return (
     <div className="gamespace">
       {cardArrangement.map((card) => {
-        return (
-          <Card
-            key={card.id}
-            image={card.image}
-            onClick={handleClick}
-          />
-        );
+        return <Card key={card.id} image={card.image} onClick={handleClick} />;
       })}
     </div>
   );

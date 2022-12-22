@@ -16,3 +16,7 @@
 .modal button {
   margin-left: 15px;
 }
+
+.modal button:hover {
+  cursor: pointer;
+}

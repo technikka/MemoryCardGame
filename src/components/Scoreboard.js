@@ -6,7 +6,7 @@ const Scoreboard = (props) => {
       <div className="current-score">Score: {props.currentScore}</div>
       <div>Best: {props.bestScore}</div>
     </div>
-  )
-}
+  );
+};
 
 export default Scoreboard;
