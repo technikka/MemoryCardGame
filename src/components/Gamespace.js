@@ -41,7 +41,6 @@ const Gamespace = (props) => {
   };
 
   const [cardArrangement, setCardArrangement] = useState(() => createCards());
-
   const [round, setRound] = useState(1);
 
   const newRound = () => {
@@ -50,30 +49,22 @@ const Gamespace = (props) => {
     props.updateBestScore();
   };
 
-  const shuffleCardArrangement = () => {
-    // using slice for react to register a change in state of cardArrangement.
-    let arr = cardArrangement.slice();
+  const shuffle = (cardArray) => {
+    let arr = cardArray;
     let i = arr.length;
     while (--i > 0) {
       let randIndex = Math.floor(Math.random() * (i + 1));
       [arr[randIndex], arr[i]] = [arr[i], arr[randIndex]];
     }
-    setCardArrangement(arr);
+    return arr;
   };
 
   const handleClick = () => {
-    shuffleCardArrangement();
+    setCardArrangement(shuffle(cardArrangement));
   };
 
   useEffect(() => {
-    // shuffle when component mounts.
-    shuffleCardArrangement();
-  }, []);
-
-  useEffect(() => {
-    // use new cards when round changes.
-    setCardArrangement(createCards());
-    shuffleCardArrangement();
+    setCardArrangement(shuffle(createCards()));
   }, [round]);
 
   return (
