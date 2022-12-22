@@ -23,6 +23,8 @@ const App = () => {
 
   return (
     <div>
+      <h1>Memory Game</h1>
+      <p>Click each card only once. </p>
       <Scoreboard currentScore={currentScore} bestScore={bestScore} />
       <Gamespace
         awardPoint={awardPoint}

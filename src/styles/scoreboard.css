@@ -1,4 +1,11 @@
 .scoreboard {
-  /* background-color: #a8a3a1; */
-  color: #eeedec;
+  border: 2px inset;
+  margin-left: 15px;
+  padding: 10px;
+  width: max-content;
+  margin-bottom: 10px;
+}
+
+.current-score {
+  color: #47C56B;
 }

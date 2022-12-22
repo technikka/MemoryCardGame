@@ -1,8 +1,21 @@
 html {
-  /* background: #a8a3a1; */
   background: #434d51;
+  color: #eeedec;
 }
+
+h1 {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+p {
+  /* display: inline-block; */
+  margin: 10px 15px;
+}
+
 
 #root {
   font-family:'Courier New', Courier, monospace;
+  display: flex;
+  justify-content: center;
 }
