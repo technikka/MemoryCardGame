@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/MemoryCardGame/static/css/main.6ad117f8.css",
+    "main.js": "/MemoryCardGame/static/js/main.1181f76a.js",
+    "static/media/insect8.jpg": "/MemoryCardGame/static/media/insect8.22b15bb6795399732c7e.jpg",
+    "static/media/insect9.jpg": "/MemoryCardGame/static/media/insect9.f8098ca6d2f1c24ab589.jpg",
+    "static/media/insect4.jpg": "/MemoryCardGame/static/media/insect4.03d7528d4a5390d799c1.jpg",
+    "static/media/insect6.jpg": "/MemoryCardGame/static/media/insect6.91270cd70cfc60f79daa.jpg",
+    "static/media/insect11.jpg": "/MemoryCardGame/static/media/insect11.0566a24a5bdeba152f31.jpg",
+    "static/media/insect3.jpg": "/MemoryCardGame/static/media/insect3.18fd9235e68f1dd75289.jpg",
+    "static/media/insect2.jpg": "/MemoryCardGame/static/media/insect2.ffeedd79f0e038e072d0.jpg",
+    "static/media/insect5.jpg": "/MemoryCardGame/static/media/insect5.8829c58f6df934ea06fc.jpg",
+    "static/media/insect13.jpg": "/MemoryCardGame/static/media/insect13.b834e11133d92b6de9f7.jpg",
+    "static/media/insect7.jpg": "/MemoryCardGame/static/media/insect7.716949974c6b18322b13.jpg",
+    "static/media/insect12.jpg": "/MemoryCardGame/static/media/insect12.7b74ba039a826a2eb6da.jpg",
+    "static/media/insect1.jpg": "/MemoryCardGame/static/media/insect1.b57c9db18d417d0d299d.jpg",
+    "index.html": "/MemoryCardGame/index.html",
+    "main.6ad117f8.css.map": "/MemoryCardGame/static/css/main.6ad117f8.css.map",
+    "main.1181f76a.js.map": "/MemoryCardGame/static/js/main.1181f76a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6ad117f8.css",
+    "static/js/main.1181f76a.js"
+  ]
+}
